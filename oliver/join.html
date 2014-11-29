@@ -1,0 +1,97 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A New Internet">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>NYC Mesh - Internet 2.0</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- MapBox -->
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-heat/v0.1.0/leaflet-heat.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+
+</head>
+
+<body>
+
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+      <div id='map'></div>
+
+      <div class="cover-container">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+            <a href="index.html" id="logo"><img class="masthead-brand" src="logo.png" id="logo_img"><h3 class="masthead-brand">NYC Mesh</h3></a>
+            <nav>
+              <ul class="nav masthead-nav">
+                <!-- <li><a href="#">What is a Mesh?</a></li> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="inner cover">
+          <h1 class="cover-heading">Nice.</br>What is your email?</h1>
+          <p class="lead">
+            <input type="text" class="span3" placeholder="you@example.com">
+            <label class="checkbox">
+              <input type="checkbox"> I have roof access.
+            </label>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    L.mapbox.accessToken = 'pk.eyJ1Ijoib28iLCJhIjoiWXFoMHRIWSJ9.ZdI5DZEZ0qE6J0IcsR3w1w';
+    var map = L.mapbox.map('map', 'oo.kbip7077', {
+      zoomControl: false
+    }),
+    heat = L.heatLayer([], { maxZoom: 15.5 }).addTo(map);
+
+    var layer = L.mapbox.featureLayer('oo.k9efp640').on('ready', function() {
+      // Add each marker point to the heatmap.
+      layer.eachLayer(function(l) {
+        heat.addLatLng(l.getLatLng());
+      });
+    });
+
+    map.featureLayer
+    // hide all markers
+    .setFilter(function() { return false; })
+    .addTo(map);
+
+    var addedMarker = false;
+    var marker;
+
+    map.on('click', function(click) {
+
+
+      if (!addedMarker) {
+        addedMarker = true;
+        marker = L.marker(click.latlng, {
+          draggable: true
+        });
+        marker.addTo(map);
+      }
+      else {
+        marker._latlng = click.latlng;
+        marker.update();
+      }
+    });
+
+
+  </script>

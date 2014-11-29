@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A New Internet">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>NYC Mesh - Internet 2.0</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- MapBox -->
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-heat/v0.1.0/leaflet-heat.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+
+</head>
+
+<body>
+
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+      <div id='map'></div>
+
+      <div class="cover-container">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+
+            <a href="#" id="logo"><img src="logo.png" id="logo_img"><h3 class="masthead-brand">NYC Mesh</h3></a>
+            <nav>
+              <ul class="nav masthead-nav">
+                <!-- <li ><a href="#">Blog</a></li> -->
+                <li class="btn-default" id="submit"><a href="join.html">Submit</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- <div class="location_question">
+          <p class="lead">What is your location?</p>
+        </div> -->
+
+        <div class="inner cover">
+          <h1 class="cover-heading" id="location">Where are you located?</h1>
+
+          <div id="main_text">
+          <h1 class="cover-heading">A New Internet</h1>
+          <p class="lead">What if any computer in New York City could connect to any other computer, for free?</p>
+          <p class="lead">
+            <a href="#" class="btn btn-lg btn-default" onclick="addNode()">Join the Mesh</a>
+          </p>
+          </div>
+        </div>
+
+        <div class="mastfoot">
+          <div class="inner">
+            <!--<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container more">
+
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+        <h2>Disaster Ready.</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      </div>
+      <div class="col-lg-4">
+        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+        <h2>Private and Secure.</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      </div>
+      <div class="col-lg-4">
+        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+        <h2>No Monthly Fee.</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-default">Get Connected</a>
+    </p>
+
+  </div>
+
+
+  <script>
+  L.mapbox.accessToken = 'pk.eyJ1Ijoib28iLCJhIjoiWXFoMHRIWSJ9.ZdI5DZEZ0qE6J0IcsR3w1w';
+  var map = L.mapbox.map('map', 'oo.k9efp640', {
+    zoomControl: false,
+    showMarkers: false
+  }),
+  heat = L.heatLayer([], { maxZoom: 15.5 }).addTo(map);
+
+  // Add each marker point to the heatmap.
+  var layer = L.mapbox.featureLayer('oo.k9efp640').on('ready', function() {
+    layer.eachLayer(function(l) {
+      heat.addLatLng(l.getLatLng());
+    });
+  });
+
+  // hide all markers
+  map.featureLayer
+  .setFilter(function() { return false; })
+  .addTo(map);
+
+  map.scrollWheelZoom.disable();
+  map.doubleClickZoom.disable();
+  map.touchZoom.disable();
+  map.dragging.disable();
+
+  function addNode() {
+    map.scrollWheelZoom.enable();
+    map.doubleClickZoom.enable();
+    map.touchZoom.enable();
+    map.dragging.enable();
+
+
+    // document.getElementById("map").style.zIndex = 0;
+    document.getElementById("main_text").style.display = "none";
+    document.getElementById("location").style.display = "inherit";
+    document.getElementById("logo").href = "index.html";
+    setTimeout(function(){document.getElementById("map").style.zIndex = 0;}, 4000);
+    map.addLayer(L.mapbox.tileLayer('oo.kbip7077'));
+  }
+
+  var addedMarker = false;
+  var marker;
+
+  map.on('click', function(click) {
+
+    var locationQuestion = document.getElementById("location");
+    var submitButton = document.getElementById("submit");
+    locationQuestion.style.display = "none";
+    submit.style.display = "inherit";
+    locationQuestion
+
+    if (!addedMarker) {
+      addedMarker = true;
+      marker = L.marker(click.latlng, {
+        draggable: true
+      });
+      marker.addTo(map);
+    }
+    else {
+      marker._latlng = click.latlng;
+      marker.update();
+    }
+  });
+
+  </script>
