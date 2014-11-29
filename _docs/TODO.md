@@ -1,7 +1,10 @@
 #Nycmeshnet
 
-###To ask
--node onboarding process
+###To discuss
+- [sitemap](http://nycmeshnet.github.io/website/sitemap/) deliverables
+	- copy
+	- tools
+- node onboarding process
 	- what data we need
 	- what procedure
 	- who follows up
@@ -11,4 +14,4 @@
 - mesh icon
 - page layout
 - article layout
-- merge oliver version and jekyll
+- merge oliver version with jekyll
