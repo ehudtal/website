@@ -1,0 +1,25 @@
+a.logo {
+     background-image: url(/assets/images/logo.jpg);
+     @include hide-text;
+     width: 150px;
+     height: 132px;
+     display: block;
+     background-size: 150px 132px;
+}
+.content {
+  width: 500px;
+  margin: $g2 auto;
+}
+p {
+  font-family: $f2;
+    font-size: ($font-rhythm * 3);
+}
+h1 {
+  font-size: ($font-rhythm * 6);
+}
+h2 {
+  font-size: ($font-rhythm * 5);
+}
+h3 {
+  font-size: ($font-rhythm * 4);
+}
