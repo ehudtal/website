@@ -23,10 +23,11 @@ nav {
     color: white;
     &:hover {
       text-decoration: none;
-
+color: white;
     }
   }
-  .secondary {
+}
+  .navigation {
     float: right;
     margin-top: $g1;
     a { 
@@ -34,10 +35,8 @@ nav {
         content: "/ ";
       }
     }
-
   }
-}
-nav, .content > h1, .content > h2, .content > h3, .content > p, .team {
+nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -45,21 +44,40 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team {
   right: 0;
 }
 .content {
-  @include translate(0, -140); 
+  position: absolute;
+  margin-top: -160px;
+  width: 100%;
+  h2 {
+    margin-top: $g3;
+padding-top: $g3;
+margin-bottom: $g1;
+    &:not(:first-of-type) {
+border-top: solid 1px black;
+
+  }
+  &:first-of-type {
+    margin-top: 0;
+  }
+  }
 }
 .title {
  padding: $g2 0;
- margin-bottom: $g2;
  color: white;
- border-top: solid 1px white;
+ border-top: solid 1px white;   
+ margin-top: 0;
+  margin-bottom: 0;
 }
 
 
 // update mapbox signature
 .leaflet-control {
   background: none !important;
+  padding: $g1 !important;
   a {
     color: rgba(255,255,255,.7) !important;
+    &:hover {
+      color: rgba(255,255,255,1) !important;
+    }
   }
   .mapbox-improve-map {
     display: none !important;
@@ -70,10 +88,14 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team {
   margin: $g2 auto;
   left: 0;
   right: 0;
-  @include grid(4, 30px);
-  width: 800px !important;
+  width: 1000px !important;
+  @include reset(list);
+
   & > li {
-    @extend .cell;
+   width: 25%;
+
+   display: inline-block;
+   vertical-align: top;
   }
 }
 
@@ -86,10 +108,24 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team {
 
 
 .team {
+  @include reset(list);
+  @include reset(padding);
   li {
-    width: 100px;
+    width: 25%;
+    display: inline-block;
+    padding: $g2;
+    border-left: solid 1px black;
+    border-top: solid 1px black;
+    &:first-of-type, &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+      border-top: none;
+    }
+        &:first-of-type, &:nth-of-type(4n+1) {
+      border-left: none;
+    }
+        
   }
   img {
+    margin: 0 auto;
     @include square(100px);
     @include radius(50%);
     margin-bottom: $g1;
@@ -101,5 +137,19 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team {
     &:not(:first-of-type) {
       border-top: none;
     }
+  }
+}
+
+footer.footer {
+  color: #666;
+  margin-top: $g2;
+  padding: $g1 0 $g2 0;
+  border-top: solid 1px #ccc;
+  a {
+    color: #666;
+  }
+  p {
+    display: inline-block;
+    width: 50%;
   }
 }

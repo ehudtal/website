@@ -202,27 +202,27 @@
   background-attachment: local, local, scroll, scroll;
 }
 
-@mixin reset($margin: true, $padding: true, $border: true, $bg: true) {
-  @if $margin == true {
-    margin:       0px !important;
-  } 
-  @else {
-  }
-  @if $padding == true {
-    padding:       0px !important;
-  } 
-  @else {
-  }
-  @if $border == true {
-    border:       none;
-  } 
-  @else {
-  }
-  @if $bg == true {
-    background:   transparent;
-  } 
-  @else {
-  }
+@mixin reset($type: all) {
+  @if $type == all {
+      margin:       0px !important;
+      padding:       0px !important;
+      border:       none;
+      background:   transparent;
+    } 
+    @else if $type == margin {
+      margin:       0px !important;
+    } 
+    @else if $type == padding {
+      padding:       0px !important;
+    } 
+    @else if $type == border {
+      border:       none;
+    } 
+    @else if $type == list {
+      list-style: none;
+    } 
+    @else {
+    }
 }
 /*
 from 
