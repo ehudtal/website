@@ -12,6 +12,4 @@
 
 ###Todo
 - mesh icon
-- page layout
 - article layout
-- merge oliver version with jekyll
