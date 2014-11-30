@@ -103,7 +103,7 @@
     zoomControl: false,
     showMarkers: false
   }),
-  heat = L.heatLayer([], { maxZoom: 15.5 }).addTo(map);
+  heat = L.heatLayer([], { maxZoom: 15 }).addTo(map);
 
   // Add each marker point to the heatmap.
   var layer = L.mapbox.featureLayer('oo.k9efp640').on('ready', function() {
