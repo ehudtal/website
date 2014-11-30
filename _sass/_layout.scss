@@ -1,12 +1,12 @@
 .logo {
  background-image: url(/assets/images/logo.png);
  background-repeat: no-repeat;
- padding-left: 35px;
+ padding-left: 40px;
+ background-position: 0 5px;
  background-size: 30px 30px;
- height: 30px;
+ height: 35px;
  display: inline-block;
-font-size: 30px;
-
+ font-size: 30px;
 }
 
 
@@ -17,27 +17,41 @@ font-size: 30px;
 nav {
   position:absolute;
   top: 0px;
-
+  margin-top: $g2;
   font-weight: bold;
   a {
-      color: white;
+    color: white;
+    &:hover {
+      text-decoration: none;
+
+    }
+  }
+  .secondary {
+    float: right;
+    margin-top: $g1;
+    a { 
+      &:not(:first-of-type):before {
+        content: "/ ";
+      }
+    }
+
   }
 }
-nav, .content > h1, .content > h2, .content > h3, .content > p {
+nav, .content > h1, .content > h2, .content > h3, .content > p, .team {
   width: 600px;
-    margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
 }
 .content {
-    @include translate(0, -140); 
+  @include translate(0, -140); 
 }
 .title {
-     padding: $g2 0;
-     margin-bottom: $g2;
-     color: white;
-     border-top: solid 1px white;
+ padding: $g2 0;
+ margin-bottom: $g2;
+ color: white;
+ border-top: solid 1px white;
 }
 
 
@@ -52,3 +66,40 @@ nav, .content > h1, .content > h2, .content > h3, .content > p {
   }
 }
 
+.actionables {
+  margin: $g2 auto;
+  left: 0;
+  right: 0;
+  @include grid(4, 30px);
+  width: 800px !important;
+  & > li {
+    @extend .cell;
+  }
+}
+
+.btn {
+  border: solid 2px black;
+  @include radius(0);
+  color: black;
+  font-weight: bold;
+}
+
+
+.team {
+  li {
+    width: 100px;
+  }
+  img {
+    @include square(100px);
+    @include radius(50%);
+    margin-bottom: $g1;
+    display: block;
+    background-color: #ccc;
+  }
+  .btn {
+    display: block;
+    &:not(:first-of-type) {
+      border-top: none;
+    }
+  }
+}

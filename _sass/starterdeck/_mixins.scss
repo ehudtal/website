@@ -142,24 +142,7 @@
   -o-background-size: 100% $height;
   background-size: 100% $height;
 }
-@mixin grid($col: 2, $gap: 15px) {
-  width: 100%;
-  @extend %border-box;
-  @extend %clearfix;
-  & > .col {
-    float: left;
-    width: (100% / $col);
-    @extend %border-box;
-    padding-left: ($gap / 2);
-    padding-right: ($gap / 2);
-    &:first-of-type {
-      padding-left: none;
-    }
-    &:nth-of-type(#{$col}) {
-      padding-right: none;
-    }
-  }
-}
+
 @mixin grid($cell: 2, $gutter: 15px, $border: false, $border-color: #ccc) {
   width: 100%;
   @extend %border-box;
