@@ -2,11 +2,11 @@
 <html>
 {% include head.html %}
 <body>
-  <div class="content">
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
-  </div>
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+
+  {% include mapbox_token.html %}
   {% include javascript.html %}
 </body>
 </html>
