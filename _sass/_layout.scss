@@ -13,6 +13,7 @@
 #map {
   width:100%; 
   height: 500px; 
+  /* height should follow screeen, 80% */
 }
 nav {
   position:absolute;
@@ -37,6 +38,9 @@ color: white;
     }
   }
 nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer {
+
+/* make it responsive */
+
   width: 600px;
   margin-left: auto;
   margin-right: auto;
