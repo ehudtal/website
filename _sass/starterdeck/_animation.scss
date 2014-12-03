@@ -50,6 +50,12 @@
     @include translate(0, -12); 
   }
 }
+@include animation(zoom) {
+  0%   { 
+    @include opacity(0); 
+    @include scale(.9);
+  }
+}
 @include animation(fadeup) {
   0%   { 
     @include opacity(0); 
