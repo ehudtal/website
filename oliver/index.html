@@ -9,7 +9,7 @@
   <title>NYC Mesh - A New Internet</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
@@ -43,10 +43,6 @@
           </div>
         </div>
 
-        <!-- <div class="location_question">
-        <p class="lead">What is your location?</p>
-      </div> -->
-
       <div class="inner cover">
         <h1 class="cover-heading" id="location">Where are you located?</h1>
 
@@ -79,7 +75,7 @@
 
     <div id="what">
       <h1 class="cover-heading">Our Mission</h1>
-      <p class="lead">We are building a resilient system that will work for daily use and also can be accessed during emergencies, power outages and internet disruptions. We will be running software for the community that is useful both for everyday needs and emergencies.
+      <p class="lead">We aim to build a resilient system that will work for daily use as well as during emergencies, power outages and internet disruptions. We will run software for the community that is useful for both everyday needs and emergencies.
       </p>
     </div>
   </div>
@@ -103,73 +99,15 @@
   <a href="#" class="btn btn-lg btn-default" onclick="addNode()">Join the Mesh</a>
 </p>
 
+<div class="footer">
+  <ul>
+    <li>Team</li> ·
+    <li>Blog</li> ·
+    <li>Contact</li>
+  </ul>
+</div>
 
-<script>
-L.mapbox.accessToken = 'pk.eyJ1Ijoib28iLCJhIjoiWXFoMHRIWSJ9.ZdI5DZEZ0qE6J0IcsR3w1w';
-var map = L.mapbox.map('map', 'oo.k9efp640', {
-  zoomControl: false,
-  showMarkers: false
-}),
-heat = L.heatLayer([], { maxZoom: 15.5 }).addTo(map);
-
-// Add each marker point to the heatmap.
-var layer = L.mapbox.featureLayer('oo.k9efp640').on('ready', function() {
-  layer.eachLayer(function(l) {
-    heat.addLatLng(l.getLatLng());
-  });
-});
-
-// hide all markers
-map.featureLayer
-.setFilter(function() { return false; })
-.addTo(map);
-
-map.scrollWheelZoom.disable();
-map.doubleClickZoom.disable();
-map.touchZoom.disable();
-map.dragging.disable();
-
-function addNode() {
-  map.scrollWheelZoom.enable();
-  map.doubleClickZoom.enable();
-  map.touchZoom.enable();
-  map.dragging.enable();
-  new L.Control.Zoom().addTo(map);
+</div>
 
 
-  // document.getElementById("map").style.zIndex = 0;
-  document.getElementById("main_text").style.display = "none";
-  document.getElementById("location").style.display = "inherit";
-  document.getElementById("logo").href = "index.html";
-  setTimeout(function(){
-    document.getElementById("map").style.zIndex = 0;
-    document.getElementById("location").style.display = "none";
-  }, 4000);
-  map.addLayer(L.mapbox.tileLayer('oo.kbip7077'));
-}
-
-var addedMarker = false;
-var marker;
-
-map.on('click', function(click) {
-
-  var locationQuestion = document.getElementById("location");
-  var submitButton = document.getElementById("submit");
-  locationQuestion.style.display = "none";
-  submit.style.display = "inherit";
-  locationQuestion
-
-  if (!addedMarker) {
-    addedMarker = true;
-    marker = L.marker(click.latlng, {
-      draggable: true
-    });
-    marker.addTo(map);
-  }
-  else {
-    marker._latlng = click.latlng;
-    marker.update();
-  }
-});
-
-</script>
+<script src='map.js'></script>
