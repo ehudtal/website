@@ -105,6 +105,11 @@ body {
   display: inline;
 }
 
+.footer a {
+  color: #1E1E1E;
+}
+
+
 /*.footer .copyright {
   margin-left: 20px;
 }*/
