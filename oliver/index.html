@@ -56,17 +56,9 @@
           <p class="lead">
             <a href="#" class="btn btn-lg btn-default" onclick="addNode()">Get Connected</a>
           </p>
-        </div>
+        </div> <!-- end main text -->
       </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <!--<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
-        </div>
-      </div>
-
     </div>
-
   </div>
 </div>
 
@@ -76,9 +68,9 @@
     <div id="what">
       <h1 class="cover-heading">What is a Mesh?</h1>
       <p class="lead">Our network is built using WiFi routers spread across the city. These routers are the "nodes" of our mesh network. A mesh network has no central server and no single internet service provider.
-    </p>
+      </p>
+    </div>
   </div>
-</div>
 
 </div>
 
@@ -88,9 +80,9 @@
     <div id="what">
       <h1 class="cover-heading">Our Mission</h1>
       <p class="lead">We are building a resilient system that will work for daily use and also can be accessed during emergencies, power outages and internet disruptions. We will be running software for the community that is useful both for everyday needs and emergencies.
-    </p>
+      </p>
+    </div>
   </div>
-</div>
 
 </div>
 
@@ -149,7 +141,10 @@ function addNode() {
   document.getElementById("main_text").style.display = "none";
   document.getElementById("location").style.display = "inherit";
   document.getElementById("logo").href = "index.html";
-  setTimeout(function(){document.getElementById("map").style.zIndex = 0;}, 4000);
+  setTimeout(function(){
+    document.getElementById("map").style.zIndex = 0;
+    document.getElementById("location").style.display = "none";
+  }, 4000);
   map.addLayer(L.mapbox.tileLayer('oo.kbip7077'));
 }
 
