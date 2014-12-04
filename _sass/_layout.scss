@@ -23,23 +23,23 @@ nav {
     color: white;
     &:hover {
       text-decoration: none;
-color: white;
+      color: white;
     }
   }
 }
-  .navigation {
-    float: right;
-    margin-top: $g1;
-    a { 
-      &:not(:first-of-type):before {
-        content: "/ ";
-      }
+.navigation {
+  float: right;
+  margin-top: $g1;
+  a { 
+    &:not(:first-of-type):before {
+      content: "/ ";
     }
   }
+}
 
 nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer {
 
-/* make it responsive */
+  /* make it responsive */
   width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -59,15 +59,15 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   width: 100%;
   h2 {
     margin-top: $g3;
-padding-top: $g3;
-margin-bottom: $g1;
+    padding-top: $g3;
+    margin-bottom: $g1;
     &:not(:first-of-type) {
-border-top: solid 1px black;
+      border-top: solid 1px black;
 
-  }
-  &:first-of-type {
-    margin-top: 0;
-  }
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
 .title {
@@ -75,7 +75,7 @@ border-top: solid 1px black;
  color: white;
  border-top: solid 1px white;   
  margin-top: 0;
-  margin-bottom: 0;
+ margin-bottom: 0;
 }
 
 
@@ -106,7 +106,7 @@ border-top: solid 1px black;
 
    display: inline-block;
    vertical-align: top;
-  }
+ }
 }
 
 .btn {
@@ -125,27 +125,27 @@ border-top: solid 1px black;
     text-align: center;
     width: 25%;
     display: inline-block;
-    padding: $g2;
+    padding: 15px;
     border-left: solid 1px black;
     border-top: solid 1px black;
     &:first-of-type, &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
       border-top: none;
     }
-        &:first-of-type, &:nth-of-type(4n+1) {
+    &:first-of-type, &:nth-of-type(4n+1) {
       border-left: none;
     }
-        
+    
   }
   h4 {
-    height: 30px;
-    font-size: 15px;
+    height: 23px;
+    font-size: 14px;
     font-weight: bold;
   }
   img {
     margin: 0 auto;
     @include square(100px);
     @include radius(50%);
-    margin-bottom: $g1;
+    margin-bottom: 5px;
     display: block;
     background-color: #ccc;
   }
