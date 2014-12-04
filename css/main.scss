@@ -15,9 +15,9 @@ $f4: monospace;                  // code font
 
 $g1: 10px;                       // base gap
 
-$c0: white;                      // color 0 (bg)
-$c1: black;                      // color 1
-$c2: #add8e6;                    // color 2
+$c0: white;                      // bg color
+$c1: black;                      // text color
+$c2: darken(red, 20%);        // accent color
 $c3: #ccc;                       // color 3
 $c4: green;                      // color 4
 $c5: yellow;                     // color 5
