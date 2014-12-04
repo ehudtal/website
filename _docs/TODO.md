@@ -11,6 +11,7 @@
 - how can we generate a coverage map
 
 ###Todo
+- google analytics
 - mesh icon
 - article layout
 - blog list layout
