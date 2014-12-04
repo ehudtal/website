@@ -13,3 +13,6 @@
 ###Todo
 - mesh icon
 - article layout
+- blog list layout
+- responsive site
+- icons, overall
