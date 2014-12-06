@@ -1,5 +1,9 @@
 L.mapbox.accessToken = 'pk.eyJ1Ijoib28iLCJhIjoiWXFoMHRIWSJ9.ZdI5DZEZ0qE6J0IcsR3w1w';
-var map = L.mapbox.map('map', 'oo.k9efp640', {
+var map_element = 'map';
+if (document.getElementById("map-header"))
+  map_element = 'map-header';
+
+var map = L.mapbox.map(map_element, 'oo.k9efp640', {
   zoomControl: false,
   showMarkers: false
 }),
@@ -22,7 +26,13 @@ map.doubleClickZoom.disable();
 map.touchZoom.disable();
 map.dragging.disable();
 
+var processBegan = false;
+var addedMarker = false;
+var marker;
+
 function addNode() {
+  if (!processBegan) {
+    processBegan = true;
   map.scrollWheelZoom.enable();
   map.doubleClickZoom.enable();
   map.touchZoom.enable();
@@ -35,22 +45,31 @@ function addNode() {
   document.getElementById("location").style.display = "inherit";
   document.getElementById("logo").href = "index.html";
   setTimeout(function(){
+    document.getElementById("logo").style.zIndex = 1;
     document.getElementById("map").style.zIndex = 0;
     document.getElementById("location").style.display = "none";
-  }, 4000);
+  }, 3000);
   map.addLayer(L.mapbox.tileLayer('oo.kbip7077'));
+  }
 }
 
-var addedMarker = false;
-var marker;
+function showForm() {
+  document.getElementById("join").style.display = "inherit";
+  document.getElementById("submit").style.display = "inherit";
+  document.getElementById("next").style.display = "none";
+  document.getElementById("map").style.zIndex = -1;
+}
+
+function submit() {
+  document.getElementById("thanks").style.display = "inherit";
+  document.getElementById("join").style.display = "none";
+  document.getElementById("submit").style.display = "none";
+}
 
 map.on('click', function(click) {
 
-  var locationQuestion = document.getElementById("location");
-  var submitButton = document.getElementById("submit");
-  locationQuestion.style.display = "none";
-  submit.style.display = "inherit";
-  locationQuestion
+  document.getElementById("location").style.display = "none";
+  document.getElementById("next").style.display = "inherit";
 
   if (!addedMarker) {
     addedMarker = true;

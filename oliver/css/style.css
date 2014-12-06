@@ -55,6 +55,11 @@ body {
   background-color: #141414;
 }
 
+#map-header {
+  position: absolute; top:0; bottom:0; width:100%; height: 25%; z-index: -1;
+  background-color: #141414;
+}
+
 .leaflet-control-attribution.leaflet-control {
   background: none !important;
 }
@@ -89,6 +94,23 @@ body {
 #what a {
   text-decoration: underline;
   color: #1E1E1E;
+}
+
+#join {
+  display: none;
+}
+
+#submit {
+  display: none;
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer ul {
@@ -169,13 +191,20 @@ body {
   border-bottom-color: #fff;
 }
 
-#submit {
+#next {
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
   display: none;
   color: #fff;
 }
 
-#location {
+#location, #thanks {
   display: none;
+}
+
+#location checkbox {
+  font-size: 30px;
 }
 
 #logo_img {
