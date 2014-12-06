@@ -138,11 +138,7 @@ $iphone-portrait: 320px;
 	outline-color: transparent;
 	outline-style: none;
 }
-[placeholder]:focus::-webkit-input-placeholder {
-	transition: all 0.5s 0.1s ease; 
-	text-indent: -50%;
-	opacity: 0;
-}
+
 a {
 	@include transition;
 }

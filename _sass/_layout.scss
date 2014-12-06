@@ -26,32 +26,30 @@ tt {
   height: 500px; 
   /* height should follow screeen, 80% */
 }
-nav {
-  position:absolute;
-  top: 0px;
-  margin-top: $g2;
-  font-weight: bold;
-  input {
-    /* add in [placeholder] object only for animation */
-    @include placeholder { 
-    color: white; 
+.mainnav {
+  float: right;
+  margin-top: $g1;
+  a { 
+    &:before {
+      content: "/ ";
     }
+  }
+    input {
 padding: 5px 10px;
-border: solid 1px white;
+border: solid 2px #ccc;
 text-align: center;
 @include radius(20px);
 width: 120px;
 background: none;
 @include transition;
-&:active, &:hover, &:focus {
-  background-color: white;
-      @include placeholder { 
-    color: #666; 
-    }
-}
-/* apply oppacity from 0 to 100 */
 
   }
+}
+nav {
+  position:absolute;
+  top: 0px;
+  margin-top: $g2;
+  font-weight: bold;
   a {
     color: white;
     border: none;
@@ -60,16 +58,49 @@ background: none;
       color: white;
     }
   }
-}
-.navigation {
-  float: right;
-  margin-top: $g1;
-  a { 
-    &:before {
-      content: "/ ";
+  .mainnav input {
+border-color: white;
+    @include placeholder { 
+    color: white; 
     }
+    &:active, &:hover, &:focus {
+  background-color: white;
+      @include placeholder { 
+    color: #666; 
+    }
+    &:active, &:hover, &:focus {
+  background-color: white;
+      @include placeholder { 
+    color: #666; 
+    }
+}
+}
   }
 }
+footer {
+  .mainnav {
+    font-weight: bold;
+    a {
+         &:hover {
+      text-decoration: none;
+      color: $c2;
+    }
+    }
+     input {
+    border-color: #ccc;
+          @include placeholder { 
+    color: #666; 
+    }
+    &:active, &:hover, &:focus {
+    border-color: $c2;
+      @include placeholder { 
+    color: $c2; 
+    }
+}
+  }
+  }
+}
+
 
 nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer {
 
@@ -110,6 +141,7 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
  border-top: solid 1px white;   
  margin-top: 0;
  margin-bottom: 0;
+ font-size: 34px;
 }
 
 
@@ -164,6 +196,8 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   @include radius(0);
   color: $c1;
   font-weight: bold;
+    padding-top: 6px !important;
+  
   &.secondary {
     border-color: lighten($c1, 70%);
     color: lighten($c1, 60%);
@@ -174,6 +208,10 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   &:hover {
     border-color: $c2;
     color: $c2;
+  }
+  &:active {
+        padding-top: 7px !important;
+    padding-bottom: 5px;
   }
 }
 .team {

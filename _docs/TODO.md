@@ -2,11 +2,11 @@
 
 ###Todo
 - google analytics
+- test new fonts, colors
 - mesh icon
-- article layout
-- blog list layout
+- search
 - responsive site
-- icons, overall
+- article, blog list, search results layout
 
 ###To discuss
 - [sitemap](http://nycmeshnet.github.io/website/sitemap/) deliverables

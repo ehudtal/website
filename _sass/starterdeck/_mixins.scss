@@ -13,7 +13,6 @@
   &:-ms-input-placeholder      { @content }
   &:focus::-webkit-input-placeholder {
     transition: all 0.5s 0.1s ease; 
-    text-indent: -50%;
     opacity: 0;
   }
 }
