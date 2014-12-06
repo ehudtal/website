@@ -17,6 +17,13 @@
     opacity: 0;
   }
 }
+@mixin filter($filter: blur, $value: 10px) { 
+  -webkit-filter: $filter+unquote('(#{$value})');
+  -moz-filter: $filter+unquote('(#{$value})');
+  -ms-filter: $filter+unquote('(#{$value})');
+  -o-filter: $filter+unquote('(#{$value})');
+  filter: $filter+unquote('(#{$value})');
+}
 @mixin box($sizing: border-box) {
   box-sizing: $sizing;
   -moz-box-sizing: $sizing;
@@ -97,31 +104,26 @@
   -o-transform:      translate($left +px, $top +px);
   transform:         translate($left +px, $top +px);
 }
-@mixin mq($point, $query1: min, $query2: width) {
-  @media screen and (#{$query1}-#{$query2}: $point) {
-    @content;
-  }
-}
 @mixin orient($orientation: landscape) {
   @media (orientation : $orientation) {
     @content;  
   }
 }
 @mixin devicewidth($minus: 0px) {
-  @media screen and (max-width: $ipad-all) {
-    width: ($ipad-all - $minus);
+  @media screen and (max-width: 1024px) {
+    width: (1024px - $minus);
   }
-  @media screen and (max-width: $ipad-portrait) {
-    width: ($ipad-portrait - $minus);
+  @media screen and (max-width: 768px) {
+    width: (768px - $minus);
   }
-  @media screen and (max-width: $iphone-5) {
-    width: ($iphone-5 - $minus);
+  @media screen and (max-width: 568px) {
+    width: (568px - $minus);
   }
-  @media screen and (max-width: $iphone-all) {
-    width: ($iphone-all - $minus);
+  @media screen and (max-width: 480px) {
+    width: (480px - $minus);
   }
-  @media screen and (max-width: $iphone-portrait) {
-    width: ($iphone-portrait - $minus);
+  @media screen and (max-width: 768px) {
+    width: (768px - $minus);
   }
 }
 @mixin gradient($from: white, $to: black, $height: 100%, $pie:"false") {
@@ -142,22 +144,20 @@
   -o-background-size: 100% $height;
   background-size: 100% $height;
 }
-
-@mixin grid($cell: 2, $gutter: 15px, $border: false, $border-color: #ccc) {
+@mixin grid($cell: 2, $gutter: 20px, $border: false, $border-color: #ccc) {
   width: 100%;
-  @extend %border-box;
-  @extend %clearfix;
-  display: table;
+  @include box;
+  @include clear;
   & > .cell, & > li, & > dt, & > section {
-    display: table-cell;
+    float: left;
     width: (100% / $cell);
-    @extend %border-box;
     padding: 0px;
+    @include box;
+    &:not(:last-of-type) {
+          padding-right: ($gutter / 2);
+    }
     &:not(:first-of-type) {
       padding-left: ($gutter / 2);
-    }
-    &:not(:nth-of-type(#{$cell})) {
-      padding-right: ($gutter / 2);
     }
     @media screen and (max-width: $device) {
       width: 100% !important;
@@ -165,17 +165,9 @@
       float: none;
       @include reset;
     }
-    @if $border == border {
-      border-right: 1px solid $border-color;
-      &:nth-of-type(#{$cell}n) {
-        border-right: none;
-      }
-    }             
-    else {
-    }
   }
 }
-@mixin scroll-hint($bgcolor: $c0) {
+@mixin scroll-hint($bgcolor: black) {
   /* from http://dabblet.com/gist/2462915 */
   overflow: auto;
   background:
@@ -241,13 +233,13 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@mixin word-wrap() {
+@mixin word-wrap {
   word-break:     break-word;
   -webkit-hyphens: auto;
   -moz-hyphens:    auto;
   hyphens:         auto;
 }
-@mixin ellipsis() {
+@mixin ellipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -257,9 +249,116 @@ http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
   text-shadow: none;
   color: transparent;
 }
-@function black($opacity) {
-  @return rgba(black, $opacity)
+@mixin clear {
+  zoom: 1;
+  &:before, 
+  &:after {
+    display:  table;
+    content:  "";
+  }
+  &:after {
+    clear:  both;
+  }
 }
-@function white($opacity) {
-  @return rgba(white, $opacity)
+@mixin cover {
+      -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+@mixin animation($title: fade) {
+  @keyframes $title          { @content }
+  @-moz-keyframes $title     { @content }
+  @-webkit-keyframes $title  { @content }
+  @-o-keyframes $title       { @content }
+}
+@mixin animate($title: fade, $duration: 500ms, $timing: ease-in) {
+ -webkit-animation: $title $duration $timing;
+ -moz-animation:    $title $duration $timing;
+ -o-animation:      $title $duration $timing;
+ animation:         $title $duration $timing;
+}
+@mixin delay($step: 1, $mode: backwards, $delay: 75ms) {
+  -webkit-animation-delay: ($delay * $step);
+  -moz-animation-delay: ($delay * $step);
+  -o-animation-delay: ($delay * $step);
+  animation-delay: ($delay * $step);
+  -webkit-animation-fill-mode: $mode;
+  -moz-animation-fill-mode: $mode;
+  -o-animation-fill-mode: $mode;
+  animation-fill-mode: $mode;
+}
+// create animation first: 
+// @include animation(animationtitle) { animation rules }
+// then assign animation to object:
+// @include animate(animationtitle, duration);
+// optionally, add delay (value is how much you multiply):
+// @include delay(2);
+
+/* animations */
+
+@include animation(progress) {
+  0%   {
+    background-size: 0% 100%;
+  }
+}
+@include animation(fade) {
+  0%   { 
+    @include opacity(0); 
+  }
+}
+@include animation(fadedown) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(0, -12); 
+  }
+}
+@include animation(fadeup) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(0, 12); 
+  }
+}
+@include animation(faderight) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(12, 0); 
+  }
+}
+@include animation(fadeleft) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(-12, 0); 
+  }
+}
+@include animation(appear) {
+  0%   { 
+    @include opacity(70);
+  }
+}
+@include animation(touchleft) {
+  0%   { 
+     @include translate(-210, 0); 
+  }
+}
+@include animation(touchright) {
+  0%   { 
+     @include translate(210, 0); 
+  }
+}
+@include animation(zoom) {
+  0%   { 
+    @include opacity(0); 
+    @include scale(.9);
+  }
+}
+@include animation(blur) {
+  0%   { 
+    @include opacity(0); 
+    -webkit-filter: blur(10px); 
+    -moz-filter: blur(10px); 
+    -o-filter: blur(10px); 
+    -ms-filter: blur(10px); 
+    filter: blur(10px);
+  }
 }

@@ -1,10 +1,9 @@
-title:            "#nycmeshnet"
+title:            "NYC Mesh"
 description:      "a better network"
 logo:
 disqus_shortname:
-search:           false
-# Change url to your domain. Leave localhost server or blank when working locally.
-url:              http://nycmeshnet.github.io/website
+search:           true
+url:              http://nycmeshnet.github.io/website/
 
 # Owner/author information
 owner:
