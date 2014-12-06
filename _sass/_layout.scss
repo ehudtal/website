@@ -1,12 +1,15 @@
 .logo {
- background-image: url(http://nycmeshnet.github.io/website/assets/images/logo.png);
+/* background-image: url(http://nycmeshnet.github.io/website/assets/images/logo.png);
  background-repeat: no-repeat;
  padding-left: 40px;
  background-position: 0 5px;
- background-size: 30px 30px;
+ background-size: 30px 30px;*/
  height: 35px;
  display: inline-block;
  font-size: 30px;
+ img {
+  @include square(30px);
+ }
 }
 
 a {
@@ -295,15 +298,6 @@ footer.footer {
   margin-bottom: 0;
 }
 .qr {
-  display: block;
   @include square(170px);
-  margin: 0 auto;
-      
-}
-#bitcoin .qr {
-  background-image: url(http://nycmeshnet.github.io/website/assets/images/QR_bitcoin.jpg);
-  background-repeat: no-repeat;
-  -webkit-background-size: 100% 100%;
-  background-size: 100% 100%;
-      
+  margin: 0 auto; 
 }
