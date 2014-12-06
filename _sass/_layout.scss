@@ -140,7 +140,7 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
    display: inline-block;
    vertical-align: top;
    padding: 0 $g3;
-   .btn {
+   & > .btn {
      display: block;
    }
    h1, h2, h3 {
