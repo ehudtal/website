@@ -151,6 +151,10 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
      }
    }
  }
+  .aaa {
+       padding: $g1 0 !important;
+       border-bottom: solid 1px $c1 !important;
+ }
 }
 .center {
   text-align: center;
@@ -251,4 +255,17 @@ footer.footer {
   color: lighten($c1, 20%);
   margin-top: 5px;
   margin-bottom: 0;
+}
+.qr {
+  display: block;
+  @include square(170px);
+  margin: 0 auto;
+      
+}
+#bitcoin .qr {
+  background-image: url(/assets/images/QR_bitcoin.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+      
 }
