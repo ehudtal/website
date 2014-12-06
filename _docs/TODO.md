@@ -7,6 +7,7 @@
 - search
 - responsive site
 - article, blog list, search results layout
+- remap site.url
 
 ###To discuss
 - [sitemap](http://nycmeshnet.github.io/website/sitemap/) deliverables
