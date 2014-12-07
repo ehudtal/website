@@ -255,8 +255,14 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   }
   .btn {
     display: block;
+        &:not(:last-of-type) {
+      border-bottom: none;
+    }
+    &:hover + .btn {
+    border-top-color: $c2;
+        
+    }
     &:not(:first-of-type) {
-      border-top: none;
       margin-top: 0;
     }
   }
