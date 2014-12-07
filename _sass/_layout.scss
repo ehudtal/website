@@ -14,7 +14,7 @@ a {
     color: $c2;
   }
 }
-tt {
+.pending {
   background-color: lighten(yellow, 30%);
   color: darken(yellow, 30%);
 }
@@ -70,6 +70,9 @@ nav {
   }
 }
 footer {
+     p {
+      margin-bottom: 5px; 
+    }
   .mainnav {
     font-weight: bold;
     a {
@@ -77,6 +80,7 @@ footer {
       text-decoration: none;
       color: $c2;
     }
+
   }
   input {
     border-color: #ccc;
