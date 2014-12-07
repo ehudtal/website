@@ -1,9 +1,9 @@
 .logo {
  height: 35px;
  display: inline-block;
- font-size: 30px;
+ font-size: 32px;
  img {
-  @include square(35px);
+  @include square(40px);
 }
 }
 body {
