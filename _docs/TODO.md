@@ -4,6 +4,7 @@
 - google analytics
 - test new fonts, colors
 - mesh icon
+- test [jQuery.smoothState.js](http://weblinc.github.io/jquery.smoothState.js/typical-implementation.html)
 - search
 - responsive site
 - article, blog list, search results layout
