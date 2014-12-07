@@ -1,6 +1,18 @@
-#Nycmeshnet
+#Nycmeshnet TODO
 
-###Todo
+###Copy
+- [Review site copy](http://nycmeshnet.github.io/website/redesign.html)
+- **New Node Setup**
+	- what we need from them other than rooftop access?
+	- no monthly fees and... help the community? preparedness? what?
+- **Newsletter**, reasons to join
+- **Footer**, our license and tools
+- **Team**, join in:
+	- image
+	- Name
+	- github and other social network, if wanted
+
+###Design
 - google analytics
 - test new fonts, colors
 - mesh icon
