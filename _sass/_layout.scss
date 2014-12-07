@@ -6,7 +6,10 @@
   @include square(35px);
 }
 }
-
+body {
+  font-size: 16px;
+  line-height: 22px;
+}
 a {
   color: lighten($c1, 40%);
   text-decoration: none;
