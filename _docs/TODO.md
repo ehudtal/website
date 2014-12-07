@@ -5,6 +5,7 @@
 - **New Node Setup**
 	- what we need from them other than rooftop access?
 	- no monthly fees and... help the community? preparedness? what?
+- **Bitcoin** instructions
 - **Newsletter**, reasons to join
 - **Footer**, our license and tools
 - **Team**, join in:

@@ -4,7 +4,7 @@
  font-size: 30px;
  img {
   @include square(30px);
- }
+}
 }
 
 a {
@@ -32,15 +32,9 @@ tt {
       content: "/ ";
     }
   }
-    input {
-padding: 5px 10px;
-border: solid 2px #ccc;
-text-align: center;
-@include radius(20px);
-width: 120px;
-background: none;
-@include transition;
-
+  input {
+    text-align: center;
+    width: 120px;
   }
 }
 nav {
@@ -57,46 +51,46 @@ nav {
     }
   }
   .mainnav input {
-border-color: white;
+    border-color: white;
     @include placeholder { 
-    color: white; 
+      color: white; 
     }
     &:active, &:hover, &:focus {
-  background-color: white;
+      background-color: white;
       @include placeholder { 
-    color: #666; 
+        color: #666; 
+      }
+      &:active, &:hover, &:focus {
+        background-color: white;
+        @include placeholder { 
+          color: #666; 
+        }
+      }
     }
-    &:active, &:hover, &:focus {
-  background-color: white;
-      @include placeholder { 
-    color: #666; 
-    }
-}
-}
   }
 }
 footer {
   .mainnav {
     font-weight: bold;
     a {
-         &:hover {
+     &:hover {
       text-decoration: none;
       color: $c2;
     }
-    }
-     input {
+  }
+  input {
     border-color: #ccc;
-          @include placeholder { 
-    color: #666; 
+    @include placeholder { 
+      color: #666; 
     }
     &:active, &:hover, &:focus {
-    border-color: $c2;
+      border-color: $c2;
       @include placeholder { 
-    color: $c2; 
+        color: $c2; 
+      }
     }
+  }
 }
-  }
-  }
 }
 
 
@@ -181,9 +175,9 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
      }
    }
  }
-  .aaa {
-       padding: $g1 0 !important;
-       border-bottom: solid 1px $c1 !important;
+ .aaa {
+   padding: $g1 0 !important;
+   border-bottom: solid 1px $c1 !important;
  }
 }
 .center {
@@ -194,7 +188,7 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   @include radius(0);
   color: $c1;
   font-weight: bold;
-    padding-top: 6px !important;
+  padding-top: 6px !important;
   
   &.secondary {
     border-color: lighten($c1, 70%);
@@ -208,7 +202,7 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
     color: $c2;
   }
   &:active {
-        padding-top: 7px !important;
+    padding-top: 7px !important;
     padding-bottom: 5px;
   }
 }
@@ -255,12 +249,12 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   }
   .btn {
     display: block;
-        &:not(:last-of-type) {
+    &:not(:last-of-type) {
       border-bottom: none;
     }
     &:hover + .btn {
-    border-top-color: $c2;
-        
+      border-top-color: $c2;
+
     }
     &:not(:first-of-type) {
       margin-top: 0;
@@ -274,9 +268,10 @@ footer.footer {
   padding: $g1 0 $g2 0;
   border-top: solid 1px #ccc;
   a {
-    color: #666;
+    color: #333;
+
   }
-  p {
+  .left {
     display: inline-block;
     width: 50%;
   }
@@ -301,4 +296,14 @@ footer.footer {
 .qr {
   @include square(170px);
   margin: 0 auto; 
+  display: block;
 }
+ input {
+    padding: 5px 10px;
+    border: solid 2px #ccc;
+    @include radius(20px);
+    background: none;
+    @include transition;
+    margin-bottom: $g1;
+    width: 100%;
+  }
