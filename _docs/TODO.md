@@ -2,10 +2,13 @@
 
 
 ###Design
-- test new fonts, colors
 - responsive site
+- newnode form
+	- scroll to top
+	- 
 - article, blog list, search results layout
 - remap site.url
+- test new fonts, colors
 
 ###To discuss
 - [sitemap](http://nycmeshnet.github.io/website/sitemap/) deliverables

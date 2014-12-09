@@ -101,9 +101,7 @@ footer {
 }
 
 
-nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer {
-
-  /* make it responsive */
+nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer, #newnode {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -118,7 +116,7 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
 }
 .content {
   @include delay(6);
-  position: absolute;
+ position: absolute;
   margin-top: -120px;
   width: 100%;
   h2 {
