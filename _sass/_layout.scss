@@ -1,3 +1,4 @@
+
 .logo {
  height: 35px;
  display: inline-block;
@@ -11,6 +12,10 @@
   @include square(30px);
 }
 }
+}
+.post-list {
+  border: dashed 1px red !important;
+      
 }
 body {
   font-size: 16px;
@@ -119,7 +124,16 @@ input {
 }
 }
 }
-nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.footer, #newnode {
+nav, 
+.content > h1, 
+.content > h2, 
+.content > h3, 
+.content > p, 
+.team, 
+#disqus_thread, 
+footer.footer, 
+#newnode, 
+.content .post-list {
   width: 600px;
   @media only screen and (max-width : 600px) {
    width: 538px;
@@ -145,6 +159,9 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
   @include delay(6);
   position: absolute;
   width: 100%;
+  & > p {
+    margin-top: $g3;
+  }
   h2 {
     margin-top: $g3;
     padding-top: $g3;
@@ -160,8 +177,10 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
 }
 .title {
  padding: $g2 0;
- margin-top: 300px;
+ @include animate(blur);
+ @include delay(6);
 
+   margin-top: 300px;
  @media only screen and (max-height : 568px) {
    margin-top: (568px - 228);
  }
@@ -174,7 +193,42 @@ nav, .content > h1, .content > h2, .content > h3, .content > p, .team, footer.fo
  color: white;
  border-top: solid 1px white;
  margin-bottom: 0;
- font-size: 34px;
+ h1 {
+  font-size: 34px;
+ }
+}
+
+.blog .title {
+   margin-top: 320px;
+ @media only screen and (max-height : 568px) {
+   margin-top: (568px - 248);
+ }
+ @media only screen and (max-height : 480px) {
+   margin-top: (480px - 248);
+ }
+  @media only screen and (max-height : 320px) {
+  margin-top: (320px - 225);
+ }
+ h1 {
+  @include ellipsis;
+  margin-bottom: 5px;
+ }
+ .tags, .sig {
+        font-size: 12px;
+            line-height: 15px;
+ }
+ .tags {
+  float: right;
+
+      border-left: solid 1px white;
+      padding-left: $g1;
+      width: 70px;
+
+      a {
+        @include clear;
+        @include ellipsis;
+      }
+ }
 }
 
 

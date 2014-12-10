@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: redesign
 title: "And so it begins!"
 description: "The nycmeshnet website is up!"
 author: peter

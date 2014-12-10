@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: redesign
 title: "A review of our first weekly meeting"
 author: peter
 ---

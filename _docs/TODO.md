@@ -2,11 +2,9 @@
 
 
 ###Design
-- responsive site
 - newnode form
 	- scroll to top
-	- 
-- article, blog list, search results layout
+- tag layout
 - remap site.url
 - test new fonts, colors
 
