@@ -2,7 +2,7 @@ title:            "NYC Mesh"
 description:      "a better network"
 logo:
 disqus_shortname:
-search:           true
+search:           false
 url:              http://nycmeshnet.github.io/website/
 
 # Owner/author information
@@ -25,18 +25,22 @@ owner:
 
 # To be used in posts to determine the author info
 authors:
-  kurt:
+  Kurt:
     name:   Kurt
     avatar: bio-photo.jpg
     email:  kurt@nycmesh.net
-  peter:
+  Peter:
     name:   Peter
     avatar: bio-photo.jpg
     email:  peter@nycmesh.net
-  brian:
+  Brian:
     name:   Brian
     avatar: bio-photo.jpg
     email:  brian@nycmesh.net
+  Nicholas:
+    name:   Nicholas
+    avatar: bio-photo.jpg
+    email:  info@nicholasfrota.com
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:

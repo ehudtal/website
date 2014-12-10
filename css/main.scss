@@ -1,32 +1,21 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
 @charset "utf-8";
 
-// base libraries to get started
-
 @import 'bootstrap/style';
-/*@import 'flexslider/style';*/
 
 $f1: Arial, Helvetica;           // title font
 $f2: Arial, Helvetica;           // text font
 $f3: Arial, Helvetica;           // symbol font
 $f4: monospace;                  // code font
-
 $g1: 10px;                       // base gap
-
 $c0: white;                      // bg color
 $c1: #333;                       // text color
 $c2: darken(red, 20%);           // accent color
 $c3: #ccc;                       // color 3
 $c4: green;                      // color 4
 $c5: yellow;                     // color 5
+$font-path: '/assets/fonts';	 // base path
+$font-rhythm: 6px;				 // unused
 
-$device: 1000px;
-$font-path: '/assets/fonts';
-$font-rhythm: 6px;
-
-@import 'starterdeck/style';
 @import 'base';
 @import 'layout';
 @import 'modules';

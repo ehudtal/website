@@ -14,8 +14,15 @@
 }
 }
 .post-list {
-  border: dashed 1px red !important;
-      
+  @include reset(list);
+  li:not(:first-of-type) {
+    border-bottom: solid 1px lighten($c1, 30%);
+  }
+  a {
+    padding: $g1 0;
+    display: block;
+  }
+  
 }
 body {
   font-size: 16px;
@@ -45,7 +52,7 @@ a {
  @media only screen and (max-height : 480px) {
    height: 480px;
  }
-  @media only screen and (max-height : 320px) {
+ @media only screen and (max-height : 320px) {
    height: 320px;
  }
 }
@@ -138,7 +145,7 @@ footer.footer,
   @media only screen and (max-width : 600px) {
    width: 538px;
  }
-   @media only screen and (max-width : 480px) {
+ @media only screen and (max-width : 480px) {
    width: 440px;
  }
  @media only screen and (max-width : 320px) {
@@ -180,55 +187,55 @@ footer.footer,
  @include animate(blur);
  @include delay(6);
 
-   margin-top: 300px;
+ margin-top: 300px;
  @media only screen and (max-height : 568px) {
    margin-top: (568px - 228);
  }
  @media only screen and (max-height : 480px) {
    margin-top: (480px - 228);
  }
-  @media only screen and (max-height : 320px) {
+ @media only screen and (max-height : 320px) {
   margin-top: (320px - 165);
- }
- color: white;
- border-top: solid 1px white;
- margin-bottom: 0;
- h1 {
+}
+color: white;
+border-top: solid 1px white;
+margin-bottom: 0;
+h1 {
   font-size: 34px;
- }
+}
 }
 
 .blog .title {
-   margin-top: 320px;
+ margin-top: 320px;
  @media only screen and (max-height : 568px) {
    margin-top: (568px - 248);
  }
  @media only screen and (max-height : 480px) {
    margin-top: (480px - 248);
  }
-  @media only screen and (max-height : 320px) {
+ @media only screen and (max-height : 320px) {
   margin-top: (320px - 225);
- }
- h1 {
+}
+h1 {
   @include ellipsis;
   margin-bottom: 5px;
- }
- .tags, .sig {
-        font-size: 12px;
-            line-height: 15px;
- }
- .tags {
+}
+.tags, .sig {
+  font-size: 12px;
+  line-height: 15px;
+}
+.tags {
   float: right;
 
-      border-left: solid 1px white;
-      padding-left: $g1;
-      width: 70px;
+  border-left: solid 1px white;
+  padding-left: $g1;
+  width: 70px;
 
-      a {
-        @include clear;
-        @include ellipsis;
-      }
- }
+  a {
+    @include clear;
+    @include ellipsis;
+  }
+}
 }
 
 
@@ -261,7 +268,7 @@ footer.footer,
   @media only screen and (max-width : 600px) {
    width: 538px;
  }
-   @media only screen and (max-width : 480px) {
+ @media only screen and (max-width : 480px) {
    width: 440px;
  }
  @media only screen and (max-width : 320px) {
