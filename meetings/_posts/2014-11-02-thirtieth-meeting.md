@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Meeting on Sunday, November 2nd, 2014"
-author: brian
+title: "Sunday, November 2nd, 2014"
+author: Brian
+tags: meetings
 ---
 
 Join us this Sunday as we plan the next steps in our journey to setup an experimental mesh network.

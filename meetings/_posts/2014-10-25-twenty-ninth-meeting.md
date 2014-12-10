@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Meeting on Saturday, October 25th, 2014"
-author: brian
+title: "Saturday, October 25th, 2014"
+author: Brian
+tags: meetings
 ---
 
 [The Utopia School Practical Mesh Workshop](http://www.meetup.com/nycmesh/events/213631142/)

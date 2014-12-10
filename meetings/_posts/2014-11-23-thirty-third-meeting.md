@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Meeting on Sunday, November 23rd, 2014"
-author: brian
+title: "Sunday, November 23rd, 2014"
+author: Brian
+tags: meetings
 ---
 
 Join us __downstairs__ at the café this Sunday as we plan the next steps in our journey to setup an experimental mesh network. After last week's successful installations we need to plan how to connect more nodes and make public access points (APs). What should our AP welcome screen say? What captive portal software to use? Community web page? Solar powered rooftop server? etc.

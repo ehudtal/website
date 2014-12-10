@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Meeting on Saturday, October 11th, 2014"
-author: brian
+title: "Saturday, October 11th, 2014"
+author: Brian
+tags: meetings
 ---
 
 [Introduction to Mesh Networks](http://utopiaschool.org/node/123)

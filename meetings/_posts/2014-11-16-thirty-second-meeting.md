@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Meeting on Sunday, November 16th, 2014"
-author: brian
+title: "Sunday, November 16th, 2014"
+author: Brian
+tags: meetings
 ---
 
 We now have enough potential nodes in the east village and lower east side to form some kind of backbone for a mesh. We're going to meet at **1pm** at a member's apartment with our routers, check that we are properly configured, and then visit other member's rooftops and see if we can connect.

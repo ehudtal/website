@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Meeting on Tuesday, March 25th, 2014"
+title: "Tuesday, March 25th, 2014"
 author: peter
 ---
 

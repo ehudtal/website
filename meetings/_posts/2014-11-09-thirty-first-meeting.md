@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Meeting on Sunday, November 9th, 2014"
-author: brian
+title: "Sunday, November 9th, 2014"
+author: Brian
+tags: meetings
 ---
 
 Join us __downstairs__ at the café this Sunday as we plan the next steps in our journey to setup an experimental mesh network.This week we'll be looking at mesh software used by Guifi, Freifunk (qMp) and Red Hook (Commotion) and seeing how it compares to cjdns. We'll also be reviewing some changes and additions to this web site and adding more potential nodes to the updated map.
