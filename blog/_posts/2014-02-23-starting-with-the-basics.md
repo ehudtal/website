@@ -1,5 +1,5 @@
 ---
-layout: redesign
+layout: post
 title: "Starting with the basics"
 author: peter
 ---
