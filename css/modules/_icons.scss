@@ -1,15 +1,5 @@
 
-@font-face {
-  font-family: "nycmesh";
-  src:url("#{$font-path}/nycmesh.eot");
-  src:url("#{$font-path}/nycmesh.eot?#iefix") format("embedded-opentype"),
-    url("#{$font-path}/nycmesh.woff") format("woff"),
-    url("#{$font-path}/nycmesh.ttf") format("truetype"),
-    url("#{$font-path}/nycmesh.svg#nycmesh") format("svg");
-  font-weight: normal;
-  font-style: normal;
 
-}
 
 [data-icon]:before {
   font-family: "nycmesh" !important;

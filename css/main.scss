@@ -16,6 +16,18 @@ $c5: yellow;                     // color 5
 $font-path: 'assets/fonts';	     // base path
 $font-rhythm: 6px;				 // unused
 
+@font-face {
+  font-family: "nycmesh";
+  src:url("assets/fonts/nycmesh.eot");
+  src:url("assets/fonts/nycmesh.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/nycmesh.woff") format("woff"),
+    url("assets/fonts/nycmesh.ttf") format("truetype"),
+    url("assets/fonts/nycmesh.svg#nycmesh") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 @import 'base';
 @import 'layout';
 @import 'modules';
