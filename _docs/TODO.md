@@ -5,8 +5,11 @@
 - newnode form
 	- scroll to top
 - tag layout
-- remap site.url
 - test new fonts, colors
+- pointers
+	- remap site.url
+	- index.html :36
+
 
 ###To discuss
 - [sitemap](http://nycmeshnet.github.io/website/sitemap/) deliverables
