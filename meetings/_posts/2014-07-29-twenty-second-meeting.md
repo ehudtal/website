@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, August 3rd, 2014"
-author: peter
+author: Peter
 ---
 
 Come join us as we prepare to get a neighborhood connected to the mesh. All are welcome.

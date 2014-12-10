@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, June 29th, 2014"
-author: peter
+author: Peter
 ---
 
 Our weekly meeting is happening at the usual time and place. We'll be playing around with what hardware we have while planning ahead for the summer, including the panel on meshnets at HOPE X!

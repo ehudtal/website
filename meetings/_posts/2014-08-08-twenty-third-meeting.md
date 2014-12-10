@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, August 10th, 2014"
-author: peter
+author: Peter
 ---
 
 Another week, another meeting. Join us and find out how to get involved.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, August 17th, 2014"
-author: peter
+author: Peter
 ---
 
 This week's meeting will be held at Hack Manhattan (thank you to our gracious hosts)!

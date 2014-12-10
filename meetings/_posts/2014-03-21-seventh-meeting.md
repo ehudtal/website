@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tuesday, March 25th, 2014"
-author: peter
+author: Peter
 ---
 
 The seventh meeting will be taking place at [xCubicle](http://www.xcubicle.com/), a local hackerspace in the Lower East Side.

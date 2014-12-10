@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, October 5th, 2014"
-author: peter
+author: Peter
 ---
 
 We'll be meeting at a member's home in an effort to get the nodes in the East Village connected.

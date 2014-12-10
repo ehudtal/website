@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, March 2nd, 2014"
-author: peter
+author: Peter
 ---
 
 We'll be continuing our weekly meetings at the same time and place. Look for the __#nycmeshnet__ sign as usual.

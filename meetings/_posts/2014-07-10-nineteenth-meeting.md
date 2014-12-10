@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, July 13th, 2014"
-author: peter
+author: Peter
 ---
 
 After taking a break July 4th weekend, we're back in gear. All who are interested in meshnets and getting one started

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, February 23rd, 2014"
-author: peter
+author: Peter
 ---
 
 Our third weekly meeting is Sunday at the same time and place! You can find us by looking for our simple paper __#nycmeshnet__ sign.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, June 8th, 2014"
-author: peter
+author: Peter
 ---
 
 Same day, same time, same place. Come learn about meshnets and what we're doing to get one started here in NYC!

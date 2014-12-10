@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, May 18th, 2014"
-author: peter
+author: Peter
 ---
 
 After a week break for Mother's Day, our meetings are back in session. Stop by this Sunday to find out how to get involved!

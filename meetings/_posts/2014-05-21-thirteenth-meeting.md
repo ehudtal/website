@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, May 25th, 2014"
-author: peter
+author: Peter
 ---
 
 We'll be having meeting number 13 (dun dun dun) this Sunday at the usual cafe. Come whether you want to see the hardware involved or whether you're just interested in the movement. All are welcome!

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, June 22nd, 2014"
-author: peter
+author: Peter
 ---
 
 Another week, another meeting. Whether you're looking to be part of the meshnet or just curious about what this whole thing is about, stop by! All are welcome.

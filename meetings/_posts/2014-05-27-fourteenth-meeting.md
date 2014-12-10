@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, June 1st, 2014"
-author: peter
+author: Peter
 ---
 
 Come join us and find out what's going on this summer! And as always, we'll set up a mini meshnet for fun (and for the sake of knowledge, too).

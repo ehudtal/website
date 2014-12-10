@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, September 28th, 2014"
-author: peter
+author: Peter
 ---
 
 After a short break, our meetings will continue!

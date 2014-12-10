@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, March 9th, 2014"
-author: peter
+author: Peter
 ---
 
 This week's meeting will happen at the same time and place.

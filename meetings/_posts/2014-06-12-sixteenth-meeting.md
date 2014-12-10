@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, June 15th, 2014"
-author: peter
+author: Peter
 ---
 
 Come to our weekly meeting and find out what's going on with us. We'll be working with our hardware while discussing what the summer has in store.

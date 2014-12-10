@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, May 4th, 2014"
-author: peter
+author: Peter
 ---
 
 We'll be meeting at the cafe again this Sunday at 3pm. As always, stop by if you want to watch us play with devices, contribute, or are just interested!

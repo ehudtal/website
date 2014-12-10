@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, March 16th, 2014"
-author: peter
+author: Peter
 ---
 
 Our sixth meeting will be business as usual. Same day, same time, same cafe.

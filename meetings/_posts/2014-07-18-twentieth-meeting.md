@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, July 20th, 2014"
-author: peter
+author: Peter
 ---
 
 Same time and place for our weekly meeting. In light of the panel on meshnets at HOPE, we'll be discussing real ways

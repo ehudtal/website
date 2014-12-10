@@ -2,7 +2,7 @@
 layout: post
 title: "And so it begins!"
 description: "The nycmeshnet website is up!"
-author: peter
+author: Peter
 ---
 
 Allow us to welcome you to our very own corner of the Internet! This website will be where any official news and information will be posted.

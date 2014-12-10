@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tuesday, April 15th, 2014"
-author: peter
+author: Peter
 ---
 
 Our next meeting will be on Tuesday, April 15th. [xCubicle](http://www.xcubicle.com/), the Lower East Side's

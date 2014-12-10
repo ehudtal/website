@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, April 27th, 2014"
-author: peter
+author: Peter
 ---
 
 Spring is around the corner, which we all know means one thing: meshnets. We'll be having our tenth meeting at our favorite Lower East Side cafe.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sunday, April 6th, 2014"
-author: peter
+author: Peter
 ---
 
 This week's meeting will happen back at our first home. Drop by, have a coffee, and let's get this going together.
