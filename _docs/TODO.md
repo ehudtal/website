@@ -2,10 +2,8 @@
 
 
 ###Design
-- larger notes
 - newsletter
 - tag layout
-- RSS icon (white, black, hover)
 - test new fonts, colors
 - pointers
 	- remap site.url
