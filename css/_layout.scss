@@ -1,4 +1,9 @@
-
+@media screen and (-webkit-min-device-pixel-ratio: 3.0) {
+  * {
+    border: dotted 1px green !important;
+        
+  }
+}
 .logo {
  height: 35px;
  display: inline-block;
