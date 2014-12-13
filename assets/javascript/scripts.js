@@ -9,7 +9,7 @@
 
 // $("html, body").animate({ scrollTop: 0 }, "slow");
 
-$("a").click(function() {
+$("a#trigger1").click(function() {
     $('html,body').animate({
         scrollTop: $("#map").offset().top},
         'slow');
