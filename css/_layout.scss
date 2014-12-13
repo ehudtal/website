@@ -1,9 +1,3 @@
-@media screen and (-webkit-min-device-pixel-ratio: 3.0) {
-  * {
-    border: dotted 1px green !important;
-        
-  }
-}
 .logo {
  height: 35px;
  display: inline-block;
@@ -214,7 +208,7 @@ right: 0;
    margin-top: (480px - 228);
  }
    @media only screen and (max-height : 559px) {
-   margin-top: (559px - 228);
+   margin-top: (559px - 165);
  }
  @media only screen and (max-height : 320px) {
   margin-top: (320px - 165);
@@ -234,6 +228,9 @@ h1 {
  }
  @media only screen and (max-height : 480px) {
    margin-top: (480px - 248);
+ }
+    @media only screen and (max-height : 559px) {
+   margin-top: (559px - 248);
  }
  @media only screen and (max-height : 320px) {
   margin-top: (320px - 225);
@@ -293,6 +290,9 @@ h1 {
  @media only screen and (max-width : 480px) {
    width: 440px;
  }
+  @media only screen and (max-width : 360px) {
+  width: 320px;
+}
  @media only screen and (max-width : 320px) {
    width: 280px;
  }
