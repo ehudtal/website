@@ -137,6 +137,13 @@ input, select, textarea {
 }
 }
 }
+  @media only screen and (max-width: 1080px)  and (-webkit-device-pixel-ratio: 2) {
+  * {
+    border: dotted 1px green !important;
+        
+  }
+ }
+
 nav, 
 .content > h1, 
 .content > h2, 
@@ -156,9 +163,6 @@ footer.footer,
  }
  @media only screen and (max-width : 320px) {
    width: 280px;
- }
-  @media only screen and (max-width: 320px) and (-webkit-device-pixel-ratio: 2) {
-     width: 280px;
  }
  margin-left: auto;
  margin-right: auto;
