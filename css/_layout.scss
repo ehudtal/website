@@ -14,14 +14,22 @@
 }
 .post-list {
   @include reset(list);
+  padding-left: 0;
   li:not(:first-of-type) {
-    border-bottom: solid 1px lighten($c1, 30%);
+    border-top: solid 1px lighten($c1, 30%);
   }
   a {
     padding: $g1 0;
     display: block;
+    .entry-date {
+      floaT: right;
+      font-size: 12px;
+    }
   }
   
+}
+.tag-box.inline {
+  display: none;
 }
 body {
   font-size: 16px;
@@ -199,16 +207,33 @@ right: 0;
  padding: $g2 0;
  @include animate(blur);
  @include delay(6);
-
  margin-top: 300px;
+ .sig {
+  margin-top: 10px;
+  margin-left: -30px;
+   @media only screen and (max-width : 600px) {
+      margin-left: -20px;
+   }
+    @media only screen and (max-height : 568px) {
+  margin-left: 0px;
+ }
+  img {
+      vertical-align: top;
+      margin-top: -10px;
+    @include square(70px);
+    @include radius(50%);
+    margin-right: 10px;
+    border: solid 2px white;
+  }
+ }
  @media only screen and (max-height : 568px) {
    margin-top: (568px - 228);
  }
- @media only screen and (max-height : 480px) {
-   margin-top: (480px - 228);
- }
  @media only screen and (max-height : 559px) {
    margin-top: (559px - 165);
+ }
+  @media only screen and (max-height : 480px) {
+   margin-top: (480px - 228);
  }
  @media only screen and (max-height : 320px) {
   margin-top: (320px - 165);
@@ -224,20 +249,20 @@ h1 {
 .blog .title {
  margin-top: 320px;
  @media only screen and (max-height : 568px) {
-   margin-top: (568px - 248);
- }
- @media only screen and (max-height : 480px) {
-   margin-top: (480px - 248);
+   margin-top: (568px - 220);
  }
  @media only screen and (max-height : 559px) {
-   margin-top: (559px - 248);
+   margin-top: (559px - 220);
+ }
+  @media only screen and (max-height : 480px) {
+   margin-top: (480px - 220);
  }
  @media only screen and (max-height : 320px) {
-  margin-top: (320px - 225);
+  margin-top: (320px - 180);
 }
 h1 {
-  @include ellipsis;
   margin-bottom: 5px;
+@include ellipsis;
 }
 .tags, .sig {
   font-size: 12px;

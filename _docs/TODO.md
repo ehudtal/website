@@ -2,7 +2,6 @@
 
 
 ###Design
-- tag layout
 - test new fonts, colors
 - pointers
 	- remap site.url
