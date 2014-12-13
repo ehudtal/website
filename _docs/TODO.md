@@ -2,7 +2,7 @@
 
 
 ###Design
-- newnode form layout
+- larger notes
 - newsletter
 - tag layout
 - RSS icon (white, black, hover)

@@ -58,6 +58,10 @@ a {
 }
 .mainnav {
   float: right;
+    @media only screen and (max-width : 320px) {
+      float: none;
+      margin-left: 50px;  
+  }
   a { 
     &:not(:first-of-type):before {
       content: "/ ";
@@ -118,9 +122,10 @@ footer {
   }
 
 }
-input {
+input, select, textarea {
   border-color: #ccc;
   @include placeholder { 
+    font-weight: bold !important;
     color: #666; 
   }
   &:active, &:hover, &:focus {
@@ -151,6 +156,9 @@ footer.footer,
  }
  @media only screen and (max-width : 320px) {
    width: 280px;
+ }
+  @media only screen and (max-width: 320px) and (-webkit-device-pixel-ratio: 2) {
+     width: 280px;
  }
  margin-left: auto;
  margin-right: auto;
@@ -470,7 +478,7 @@ footer.footer {
   margin: 0 auto; 
   display: block;
 }
-input {
+input, select, textarea {
   padding: 5px 10px;
   border: solid 2px #ccc;
   @include radius(20px);
@@ -478,4 +486,13 @@ input {
   @include transition;
   margin-bottom: $g1;
   width: 100%;
+}
+textarea {
+  height: 100px;
+
+  @media only screen and (max-height : 320px) {
+    height: 37px;
+        
+  }
+
 }

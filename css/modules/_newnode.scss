@@ -1,8 +1,8 @@
 #newnode { 
   position: absolute;
   top: 60px;
-      @media only screen and (max-width : 568px) and (min-width : 321px) {
-  top: 25px;
+  @media only screen and (max-width : 568px) and (min-width : 321px) {
+    top: 25px;
   }
   padding: $g2 0;
   .tab-pane {
@@ -17,6 +17,9 @@
   color: white;
   h2 {
     display: inline-block;
+    @media only screen and (max-height : 320px) {
+      font-size: 20px;
+    }
   }
   .pending {
     color: white;
@@ -29,17 +32,22 @@
       color: $g2;
     }
   }
-  .btn {
-    color: white;
+  .btn { 
+    color: white !important;
     border-color: white;
-    background-color: rgba(0,0,0,.3);
-    float: right;
+    background-color: rgba(0,0,0,.3) !important;
+    float: right !important;
+    display: inline-block !important;
     padding: 15px 20px !important;
-          @media only screen and (max-width : 568px) {
-  padding: 10px 20px !important;
+    width: 150px;
+        @media only screen and (max-width : 320px) {
+    width: 100%;
   }
+    @media only screen and (max-width : 568px) {
+      padding: 10px 20px !important;
+    }
     &:hover {
-     background-color: rgba(0,0,0,.6);
+     background-color: rgba(0,0,0,.6) !important;
    }
  }
  label input[type=checkbox] {
@@ -54,7 +62,7 @@
     color: white; 
   }
 
-  &:active, &:hover, &:focus, &:valid {
+  &:active, &:hover, &:focus, &:not(:empty) {
     color: black;
     background-color: white;
     @include placeholder { 
