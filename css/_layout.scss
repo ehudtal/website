@@ -52,15 +52,18 @@ a {
  @media only screen and (max-height : 480px) {
    height: 480px;
  }
+  @media only screen and (max-height : 559px) {
+   height: 559px;
+ }
  @media only screen and (max-height : 320px) {
    height: 320px;
  }
 }
 .mainnav {
   float: right;
-    @media only screen and (max-width : 320px) {
-      float: none;
-      margin-left: 50px;  
+  @media only screen and (max-width : 320px) {
+    float: none;
+    margin-left: 50px;  
   }
   a { 
     &:not(:first-of-type):before {
@@ -137,12 +140,6 @@ input, select, textarea {
 }
 }
 }
-  @media only screen and (max-width: 540px)  and (-webkit-device-pixel-ratio: 2) {
-  * {
-    border: dotted 1px green !important;
-        
-  }
- }
 
 nav, 
 .content > h1, 
@@ -158,19 +155,20 @@ footer.footer,
   @media only screen and (max-width : 600px) {
    width: 538px;
  }
- @media only screen and (max-width: 540px)  and (-webkit-device-pixel-ratio: 2) {
-  width: 500px;
-}
+
  @media only screen and (max-width : 480px) {
    width: 440px;
  }
- @media only screen and (max-width : 320px) {
-   width: 280px;
- }
- margin-left: auto;
- margin-right: auto;
- left: 0;
- right: 0;
+ @media only screen and (max-width : 360px) {
+  width: 320px;
+}
+@media only screen and (max-width : 320px) {
+ width: 280px;
+}
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
 }
 .leaflet-overlay-pane, .content {
   @include animate(blur);
@@ -209,6 +207,9 @@ footer.footer,
  }
  @media only screen and (max-height : 480px) {
    margin-top: (480px - 228);
+ }
+   @media only screen and (max-height : 559px) {
+   margin-top: (559px - 228);
  }
  @media only screen and (max-height : 320px) {
   margin-top: (320px - 165);
@@ -499,7 +500,7 @@ textarea {
 
   @media only screen and (max-height : 320px) {
     height: 37px;
-        
+
   }
 
 }
