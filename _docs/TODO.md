@@ -2,8 +2,7 @@
 
 
 ###Design
-- newnode form
-	- scroll to top
+- newnode form layout
 - newsletter
 - tag layout
 - RSS icon (white, black, hover)
